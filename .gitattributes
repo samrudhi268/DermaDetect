@@ -1,0 +1,2 @@
+server/model/resnet50_custom.pth filter=lfs diff=lfs merge=lfs -text
+server/server.zip filter=lfs diff=lfs merge=lfs -text
