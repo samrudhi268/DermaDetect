@@ -2,11 +2,11 @@
 client/node_modules/
 server/node_modules/
 
-# Ignore build output
+# Ignore build output folders
 client/build/
 server/dist/
 
-# Ignore environment variable files
+# Ignore environment variables files
 *.env
 
 # Ignore log files
@@ -14,7 +14,7 @@ logs/
 *.log
 npm-debug.log*
 
-# Ignore IDE specific files
+# Ignore IDE and editor settings
 .vscode/
 .idea/
 .DS_Store
@@ -24,8 +24,20 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Ignore other dependency folders
-client/yarn.lock
-server/yarn.lock
-client/package-lock.json
-server/package-lock.json
+# Ignore uploaded images, documents, reports
+server/uploads/
+server/reports/
+
+# Optional: ignore large machine learning model files unless using Git LFS
+server/model/
+
+# Ignore cache directories if any
+client/.cache/
+server/.cache/
+
+# Ignore coverage reports (if any testing)
+coverage/
+
+# Ignore temporary files
+*.tmp
+*.temp
