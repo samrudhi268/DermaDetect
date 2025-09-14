@@ -15,6 +15,8 @@ const Register = () => {
     password2: ''
   });
 
+  const [error, setError] = useState('');
+
   const { name, email, password, password2 } = formData;
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -22,8 +24,9 @@ const Register = () => {
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      alert('Passwords do not match');
+      setError('Passwords do not match');
     } else {
+      setError('');
       dispatch(register({ name, email, password }));
     }
   };
@@ -35,46 +38,27 @@ const Register = () => {
   return (
     <div className="auth-container">
       <h2>Register</h2>
+      {error && <div className="alert alert-danger">{error}</div>}
       <form onSubmit={onSubmit} className="auth-form">
         <div className="form-group">
           <label>Name</label>
           <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={onChange}
-            required
-          />
+            type="text" name="name" value={name} onChange={onChange} required />
         </div>
         <div className="form-group">
           <label>Email</label>
           <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={onChange}
-            required
-          />
+            type="email" name="email" value={email} onChange={onChange} required />
         </div>
         <div className="form-group">
           <label>Password</label>
           <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={onChange}
-            required
-          />
+            type="password" name="password" value={password} onChange={onChange} required />
         </div>
         <div className="form-group">
           <label>Confirm Password</label>
           <input
-            type="password"
-            name="password2"
-            value={password2}
-            onChange={onChange}
-            required
-          />
+            type="password" name="password2" value={password2} onChange={onChange} required />
         </div>
         <button type="submit" className="btn">Register</button>
       </form>

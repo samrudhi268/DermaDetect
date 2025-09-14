@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="navbar-brand">
         <Link to="/about">
           <img src={logo} alt="EpiDetect Logo" className="navbar-logo" />
-          EpiDetect
+          DermaDetect
         </Link>
       </div>
       <div className="navbar-links">

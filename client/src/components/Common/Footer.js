@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 EpiDetect. All rights reserved.</p>
+      <p>&copy; 2024 DermaDetect. All rights reserved.</p>
       <div className="footer-links">
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>

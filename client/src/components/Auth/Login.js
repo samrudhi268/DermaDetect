@@ -7,7 +7,7 @@ import './Auth.css';
 const Login = () => {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector(state => state.auth.isAuthenticated);
-  const alerts = useSelector(state => state.alert);
+  const alerts = useSelector(state => state.alert); // optional alert messages
 
   const [formData, setFormData] = useState({
     email: '',
@@ -34,22 +34,12 @@ const Login = () => {
         <div className="form-group">
           <label>Email</label>
           <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={onChange}
-            required
-          />
+            type="email" name="email" value={email} onChange={onChange} required />
         </div>
         <div className="form-group">
           <label>Password</label>
           <input
-            type="password"
-            name="password"
-            value={password}
-            onChange={onChange}
-            required
-          />
+            type="password" name="password" value={password} onChange={onChange} required />
         </div>
         <button type="submit" className="btn">Login</button>
       </form>
