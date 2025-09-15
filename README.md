@@ -88,7 +88,6 @@ This is a group project. Please coordinate with your team members for any change
 ## Contact
 
 For inquiries or contributions, contact the group members via GitHub.
-You can create a file named README.md in your project root, paste the above content, save, then add and commit it with:
 
 
 
